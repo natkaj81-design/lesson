@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Інтерактивний урок: безпечне користування Інтернетом і критичне оцінювання інформації.">
+<title>Безпечний Інтернет — інтерактивний урок</title>
+<style>
+:root{--bg:#f4f7fb;--ink:#182338;--muted:#5d6b82;--primary:#3157d5;--accent:#16a085;--card:#fff;--line:#dce4f0;--warn:#fff3d6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{background:linear-gradient(130deg,#172554,#3157d5 65%,#16a085);color:#fff;padding:42px 20px 34px}
+.wrap{max-width:1050px;margin:auto;padding:0 18px}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-weight:800;font-size:.78rem;opacity:.85}
+h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.1;margin:.5rem 0 1rem}header p{max-width:760px;font-size:1.1rem;margin:0}
+nav{display:flex;flex-wrap:wrap;gap:9px;margin-top:25px}nav a{color:#fff;text-decoration:none;border:1px solid #ffffff70;border-radius:999px;padding:7px 13px;font-weight:650}nav a:hover{background:#ffffff20}
+main{padding:28px 0 60px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:23px;box-shadow:0 8px 24px #1725540a;margin-bottom:18px}
+h2{margin:0 0 14px;font-size:1.55rem}h3{margin:.4rem 0;font-size:1.08rem}.tag{display:inline-block;border-radius:7px;background:#e8edff;color:#2445b5;font-size:.78rem;font-weight:800;padding:3px 8px;margin-bottom:8px}
+ul{padding-left:1.25rem}li{margin:.35rem 0}.muted{color:var(--muted)}.callout{background:#edf8f5;border-left:4px solid var(--accent);padding:12px 15px;border-radius:8px;margin:15px 0}.warning{background:var(--warn);border-left:4px solid #e7a521;padding:12px 15px;border-radius:8px;margin:15px 0}
+.criteria{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.criterion{background:#f6f8fc;border:1px solid var(--line);border-radius:12px;padding:14px}.criterion strong{display:block;color:#2445b5;margin-bottom:4px}
+.task-step{border:1px solid var(--line);border-radius:12px;padding:15px;margin:12px 0}.task-step label{display:block;font-weight:700;margin-bottom:6px}textarea,input[type=text]{width:100%;border:1px solid #bdc9db;border-radius:9px;padding:10px;font:inherit;background:#fff;color:var(--ink)}textarea{min-height:82px;resize:vertical}
+.question{padding:15px 0;border-bottom:1px solid var(--line)}.question:last-child{border-bottom:0}.question p{font-weight:700;margin:0 0 9px}.option{display:flex;gap:9px;align-items:flex-start;padding:7px 9px;border-radius:8px;cursor:pointer}.option:hover{background:#f1f4ff}.option input{margin-top:6px;accent-color:var(--primary)}
+button{border:0;border-radius:10px;padding:11px 17px;background:var(--primary);color:#fff;font:inherit;font-weight:750;cursor:pointer}button:hover{filter:brightness(.94)}button.secondary{background:#e9eef7;color:#24334e;margin-left:7px}
+#result{display:none;margin-top:18px;padding:17px;border-radius:12px;background:#edf8f5;border:1px solid #b8e5d9} .correct{color:#087b5b}.incorrect{color:#b42318}.small{font-size:.9rem}
+footer{text-align:center;color:var(--muted);padding:24px 16px}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.criteria{grid-template-columns:1fr}header{padding-top:30px}.card{padding:18px}}
+@media print{nav,button{display:none}body{background:#fff}.card{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Інтерактивний урок з інформатики</div>
+    <h1>Безпечне користування Інтернетом</h1>
+    <p>Критично оцінюємо відомості, розпізнаємо ризики та приймаємо відповідальні рішення в цифровому середовищі.</p>
+    <nav aria-label="Навігація сторінкою">
+      <a href="#theory">Теорія</a><a href="#task">Компетентнісне завдання</a><a href="#test">Тест</a><a href="#reflection">Рефлексія</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<section class="card" id="theory">
+  <span class="tag">01 · Вивчаємо</span>
+  <h2>Теорія: як діяти безпечно</h2>
+  <p>Інтернет дає доступ до навчальних матеріалів, спілкування та розваг. Водночас не кожен користувач є тим, за кого себе видає, а не кожна вебсторінка містить правдиву й корисну інформацію.</p>
+  <div class="grid">
+    <div>
+      <h3>Правила безпечної поведінки</h3>
+      <ul>
+        <li>Не повідомляй незнайомцям адресу, номер телефону, паролі, дані документів та інші приватні відомості.</li>
+        <li>Створюй унікальні надійні паролі; не передавай їх іншим і не публікуй у відкритому доступі.</li>
+        <li>Не відкривай підозрілі посилання й вкладення. Перевіряй адресу сайту та відправника.</li>
+        <li>Не погоджуйся на зустріч із людиною, з якою познайомився лише онлайн, без участі дорослих, яким довіряєш.</li>
+        <li>Якщо тебе залякують, шантажують або просять надіслати особисті фото — припини спілкування, збережи докази та звернися до дорослого, якому довіряєш.</li>
+        <li>Перш ніж поширити допис, перевір його достовірність і подумай про можливі наслідки.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Як оцінити вебсторінку</h3>
+      <div class="criterion"><strong>Навігація та зручність</strong>Чи легко знайти потрібну інформацію? Чи зрозуміла структура сторінки?</div>
+      <div class="criterion"><strong>Авторство</strong>Хто створив матеріал? Чи зазначені автор, організація та контакти?</div>
+      <div class="criterion"><strong>Надійність змісту</strong>Які докази наведено? Чи є дата публікації? Чи підтверджують твердження незалежні джерела?</div>
+    </div>
+  </div>
+  <div class="callout"><strong>Правило перевірки:</strong> зупинись → перевір автора й дату → знайди підтвердження в інших надійних джерелах → лише тоді роби висновок або поширюй.</div>
+  <div class="warning"><strong>Пам’ятай:</strong> привабливий дизайн, велика кількість підписників або впевнена манера викладу самі по собі не доводять правдивості інформації.</div>
+</section>
+
+<section class="card" id="task">
+  <span class="tag">02 · Застосовуємо</span>
+  <h2>Компетентнісне завдання «Чи можна довіряти?»</h2>
+  <p><strong>Ситуація.</strong> У класному чаті з’явилося повідомлення: «Усі учні можуть безкоштовно отримати новий смартфон. Заповни форму за посиланням протягом 10 хвилин. Потрібно ввести ім’я, адресу, номер телефону та пароль від електронної пошти». Автор повідомлення невідомий.</p>
+  <p class="muted">Працюй самостійно або в парі. Запиши рішення та поясни його.</p>
+  <div class="task-step"><label for="risk">1. Назви щонайменше три ознаки ризику в повідомленні.</label><textarea id="risk" placeholder="Наприклад: невідомий автор…"></textarea></div>
+  <div class="task-step"><label for="actions">2. Які три дії ти виконаєш перед тим, як реагувати на повідомлення?</label><textarea id="actions" placeholder="Спочатку я…"></textarea></div>
+  <div class="task-step"><label for="source">3. Як перевіриш, чи справжня ця пропозиція?</label><textarea id="source" placeholder="Перевірю…"></textarea></div>
+  <div class="task-step"><label for="decision">4. Сформулюй безпечне рішення та поясни його.</label><textarea id="decision" placeholder="Я не буду… тому що…"></textarea></div>
+  <button type="button" onclick="showTaskGuide()">Показати орієнтир для самоперевірки</button>
+  <div id="taskGuide" class="callout" hidden><strong>Орієнтир:</strong> підозрілі ознаки — невідомий автор, обіцянка дорогого подарунка, штучний поспіх, запит приватних даних і пароля. Не відкривай посилання та не вводь дані. Перевір пропозицію на офіційному сайті організатора, зв’яжися з ним через відомі офіційні контакти й порадься з дорослим. Пароль від пошти не можна передавати нікому.</div>
+  <p class="small muted">Самооцінювання: по 1 балу за кожен пункт, якщо відповідь містить обґрунтовану думку. Максимум — 4 бали.</p>
+</section>
+
+<section class="card" id="test">
+  <span class="tag">03 · Перевіряємо знання</span>
+  <h2>Тест</h2>
+  <p class="muted">Оберіть одну відповідь у кожному запитанні. Після натискання кнопки побачите результат і пояснення.</p>
+  <form id="quizForm">
+    <div class="question"><p>1. Який пароль є найкращим вибором?</p>
+      <label class="option"><input type="radio" name="q1" value="a"> <span>12345678</span></label>
+      <label class="option"><input type="radio" name="q1" value="b"> <span>Один пароль для всіх сайтів</span></label>
+      <label class="option"><input type="radio" name="q1" value="c"> <span>Довгий унікальний пароль або парольна фраза</span></label>
+      <label class="option"><input type="radio" name="q1" value="d"> <span>Ім’я та дата народження</span></label>
+    </div>
+    <div class="question"><p>2. Тобі надіслали посилання на «терміновий виграш», але відправник невідомий. Що робити?</p>
+      <label class="option"><input type="radio" name="q2" value="a"> <span>Відкрити одразу, щоб не втратити виграш</span></label>
+      <label class="option"><input type="radio" name="q2" value="b"> <span>Не відкривати, перевірити повідомлення й відправника</span></label>
+      <label class="option"><input type="radio" name="q2" value="c"> <span>Переслати всім друзям</span></label>
+      <label class="option"><input type="radio" name="q2" value="d"> <span>Ввести пароль, щоб підтвердити особу</span></label>
+    </div>
+    <div class="question"><p>3. Що найбільше допомагає оцінити надійність вебсторінки?</p>
+      <label class="option"><input type="radio" name="q3" value="a"> <span>Яскраві кольори та анімація</span></label>
+      <label class="option"><input type="radio" name="q3" value="b"> <span>Велика кількість реклами</span></label>
+      <label class="option"><input type="radio" name="q3" value="c"> <span>Перевірка автора, дати, доказів і підтвердження в інших джерелах</span></label>
+      <label class="option"><input type="radio" name="q3" value="d"> <span>Кількість переглядів без перевірки змісту</span></label>
+    </div>
+    <div class="question"><p>4. Яку інформацію не слід повідомляти незнайомцю в мережі?</p>
+      <label class="option"><input type="radio" name="q4" value="a"> <span>Назву улюбленої книжки</span></label>
+      <label class="option"><input type="radio" name="q4" value="b"> <span>Посилання на загальнодоступну енциклопедію</span></label>
+      <label class="option"><input type="radio" name="q4" value="c"> <span>Пароль, домашню адресу та дані документів</span></label>
+      <label class="option"><input type="radio" name="q4" value="d"> <span>Назву навчального предмета</span></label>
+    </div>
+    <div class="question"><p>5. На сайті немає автора, дати публікації та посилань на докази. Як діяти?</p>
+      <label class="option"><input type="radio" name="q5" value="a"> <span>Одразу використати інформацію в рефераті</span></label>
+      <label class="option"><input type="radio" name="q5" value="b"> <span>Вважати все правдою, якщо текст написаний упевнено</span></label>
+      <label class="option"><input type="radio" name="q5" value="c"> <span>Поширити матеріал, щоб інші перевірили</span></label>
+      <label class="option"><input type="radio" name="q5" value="d"> <span>Знайти підтвердження в інших надійних джерелах</span></label>
+    </div>
+    <div class="question"><p>6. Незнайомець у чаті просить надіслати особисте фото та зберегти це в таємниці. Що робити?</p>
+      <label class="option"><input type="radio" name="q6" value="a"> <span>Надіслати, якщо він здається привітним</span></label>
+      <label class="option"><input type="radio" name="q6" value="b"> <span>Припинити спілкування та повідомити дорослого, якому довіряєш</span></label>
+      <label class="option"><input type="radio" name="q6" value="c"> <span>Надіслати фото, але без імені</span></label>
+      <label class="option"><input type="radio" name="q6" value="d"> <span>Домовитися про зустріч наодинці</span></label>
+    </div>
+    <button type="button" onclick="gradeQuiz()">Перевірити відповіді</button>
+    <button type="reset" class="secondary" onclick="resetQuiz()">Спробувати ще раз</button>
+  </form>
+  <div id="result" aria-live="polite"></div>
+</section>
+
+<section class="card" id="reflection">
+  <span class="tag">04 · Рефлексуємо</span>
+  <h2>Мій цифровий висновок</h2>
+  <p>Заверши речення одним-двома реченнями:</p>
+  <label for="reflectionText"><strong>«Відтепер, коли я бачитиму сумнівну інформацію в Інтернеті, я…»</strong></label>
+  <textarea id="reflectionText" placeholder="Напиши свій висновок…"></textarea>
+  <div class="callout">Головна думка уроку: <strong>не поспішай довіряти — перевіряй, захищай особисті дані та звертайся по допомогу, якщо щось насторожує.</strong></div>
+  <button type="button" onclick="window.print()">Зберегти сторінку / друкувати</button>
+</section>
+</main>
+<footer><div class="wrap">Навчальний матеріал з інформатики · Безпечне та відповідальне користування Інтернетом</div></footer>
+<script>
+function showTaskGuide(){document.getElementById('taskGuide').hidden=false;}
+const key={q1:'c',q2:'b',q3:'c',q4:'c',q5:'d',q6:'b'};
+const explanations={
+q1:'Надійний пароль має бути довгим, унікальним і не містити очевидних особистих даних.',
+q2:'Підозрілі посилання можуть вести на фішингові сторінки або шкідливі ресурси.',
+q3:'Авторство, дата, докази та незалежні підтвердження допомагають оцінити достовірність.',
+q4:'Паролі, адреса й дані документів належать до приватної інформації.',
+q5:'Відсутність автора, дати й доказів — привід перевірити відомості за іншими джерелами.',
+q6:'Не надсилай особисті фото на вимогу незнайомця. Припини спілкування й звернися до дорослого, якому довіряєш.'
+};
+function gradeQuiz(){
+ let score=0, answered=0, details=[];
+ for(let i=1;i<=6;i++){
+  const q='q'+i, chosen=document.querySelector('input[name="'+q+'"]:checked');
+  if(chosen) answered++;
+  const ok=chosen && chosen.value===key[q];
+  if(ok) score++;
+  details.push('<li class="'+(ok?'correct':'incorrect')+'">Запитання '+i+': '+(ok?'правильно':'неправильно або немає відповіді')+'. '+explanations[q]+'</li>');
+ }
+ const result=document.getElementById('result');
+ result.style.display='block';
+ result.innerHTML='<h3>Ваш результат: '+score+' із 6 балів</h3><p>Відповіли на '+answered+' із 6 запитань.</p><ul>'+details.join('')+'</ul><p><strong>Орієнтовне самооцінювання:</strong> 6 — відмінно; 4–5 — добре; 2–3 — варто повторити матеріал; 0–1 — опрацюй теорію ще раз.</p>';
+ result.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function resetQuiz(){const r=document.getElementById('result');r.style.display='none';r.innerHTML='';}
+</script>
+</body>
+</html>
